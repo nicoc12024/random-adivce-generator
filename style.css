@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #2d323d;
+  color: rgb(231, 231, 231);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.instructionInfo {
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.container {
+  position: relative;
+  border-radius: 5px;
+  min-width: 200px;
+  width: 85%;
+  margin: 1rem;
+  padding: 3rem;
+  background-color: #202632;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.container .affirmationContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .affirmationContent p {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  transition: color 0.5s ease;
+}
+
+.affNumber {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #55fdacb7 !important;
+}
+
+i {
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+button {
+  position: absolute;
+  bottom: -25px;
+  text-align: center;
+  color: white;
+  background-color: #55fdacb7;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  transition: box-shadow 0.1s ease-in-out;
+  padding: 0.8rem;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: #55fdacb7 0px 0px 17px 0px;
+}
+
+button:hover i {
+  transform: rotate(90deg);
+}
+
+@media (min-width: 650px) {
+  .container {
+    width: 650px;
+  }
+}
