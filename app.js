@@ -1,9 +1,14 @@
 const button = document.querySelector(".button");
 const paragraph = document.querySelector(".text");
 const affNumber = document.querySelector(".affNumber span");
+const iconDice = document.querySelector(".fas");
 
 button.addEventListener("click", () => {
   getRandomAdvice();
+  iconDice.classList.add("rotate");
+  setTimeout(() => {
+    iconDice.classList.remove("rotate");
+  }, "1000");
 });
 
 async function getRandomAdvice() {
@@ -12,5 +17,4 @@ async function getRandomAdvice() {
 
   paragraph.innerHTML = data.slip.advice;
   affNumber.innerHTML = data.slip.id;
-  console.log(data);
 }

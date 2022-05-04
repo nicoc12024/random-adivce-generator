@@ -21,11 +21,6 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.instructionInfo {
-  font-size: 1.2rem;
-  margin-top: 1.4rem;
-}
-
 .container {
   position: relative;
   border-radius: 5px;
@@ -58,9 +53,48 @@ h3 {
   color: #55fdacb7 !important;
 }
 
+.instructionInfo {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
 i {
   color: black;
-  transition: transform 0.3s ease-in-out;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+    background-position: top left;
+  }
+  50% {
+    transform: translate(0, 7px);
+  }
+  100% {
+    transform: translate(0, 0px);
+    background-position: top right;
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-duration: 0.6s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 button {
@@ -82,10 +116,6 @@ button {
 
 button:hover {
   box-shadow: #55fdacb7 0px 0px 17px 0px;
-}
-
-button:hover i {
-  transform: rotate(90deg);
 }
 
 @media (min-width: 650px) {
